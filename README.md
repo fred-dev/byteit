@@ -20,4 +20,4 @@ A server app shows questions to the audience and the phones/browsers in the room
 
 ## Build
 
-Addons: `ofxHTTP`, `ofxJSONRPC`, `ofxIO`, `ofxMediaType`, `ofxNetworkUtils`, `ofxSSLManager`, `ofxPoco` (or [ofxPocoHeaders](https://github.com/fred-dev/ofxPocoHeaders)). Generate the project with projectGenerator.
+Addon: `ofxJSONRPC`, which pulls in `ofxHTTP`, `ofxIO`, `ofxMediaType`, `ofxNetworkUtils`, `ofxSSLManager` and [ofxPocoHeaders](https://github.com/fred-dev/ofxPocoHeaders). Use the `poco_headers_only` branches of those addons; ofxJSONRPC needs its dependency changed from `ofxPoco` to `ofxPocoHeaders` and `#include "json.hpp"` changed to `#include "ofJson.h"`. Generate the project with projectGenerator.
